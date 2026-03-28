@@ -42,25 +42,38 @@
         .reveal.active { opacity: 1; transform: translateY(0); }
         @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); box-shadow: 0 0 20px rgba(37, 211, 102, 0.5); } }
         .wa-float { animation: pulse 2s infinite; }
+                .logo-breakout {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0.5rem;
+            z-index: 100;
+        }
+
+        .nav-slim {
+            height: 70px;
+        }
     </style>
 </head>
 <body class="bg-brand-cream font-sans text-gray-900">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white/95 shadow-sm border-b border-brand-gold/20 py-4 flex justify-between items-center px-8">
-        <div class="flex flex-col">
-            <span class="font-serif text-2xl font-bold text-brand-maroon tracking-tighter leading-none">VIRAL</span>
-            <span class="font-accent italic text-brand-gold leading-none text-xl">Vyahh</span>
+    <nav class="fixed w-full z-50 bg-white/95 shadow-sm border-b border-brand-gold/20 nav-slim flex items-center px-8">
+        
+        <div class="logo-breakout">
+            <a href="#home">
+                <img src="1000852021.png" alt="Viral Vyahh Logo" class="h-28 md:h-60 w-auto object-contain transition-transform hover:scale-105 duration-300">
+            </a>
         </div>
-        <div class="hidden md:flex space-x-8 uppercase text-xs font-bold tracking-widest items-center">
-            <a href="#home" class="hover:text-brand-gold">Home</a>
-            <a href="#featured" class="hover:text-brand-gold">Our Work</a>
-            <a href="#services" class="hover:text-brand-gold">Services</a>
-            <a href="#instagram" class="hover:text-brand-gold">Instagram</a>
-            <a href="#contact" class="bg-brand-maroon text-brand-gold px-5 py-2 border border-brand-gold hover:bg-black transition-colors">Contact</a>
+        
+        <div class="ml-auto hidden md:flex space-x-8 uppercase text-[11px] font-bold tracking-[0.2em] items-center">
+            <a href="#home" class="hover:text-brand-gold transition-colors">Home</a>
+            <a href="#featured" class="hover:text-brand-gold transition-colors">Our Work</a>
+            <a href="#services" class="hover:text-brand-gold transition-colors">Services</a>
+            <a href="#instagram" class="hover:text-brand-gold transition-colors">Instagram</a>
+            <a href="#contact" class="bg-brand-maroon text-brand-gold px-6 py-2 border border-brand-gold hover:bg-black transition-all shadow-md">Contact</a>
         </div>
     </nav>
-
     <!-- Hero -->
     <section id="home" class="hero-bg h-screen flex items-center justify-center text-center">
         <div class="reveal px-4">
